@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CrackRAR2 {
+public class CrackTest {
 	static boolean keep = true;
 
 	public static void main(String[] args) throws IOException, InterruptedException {
@@ -35,7 +35,7 @@ public class CrackRAR2 {
 			numList = add(numList, maxList, nums.length);
 			String pw = getPW(numList, nums);
 //			boolean correct = isPasswordCorrect(rarFile, pw, UnRar);
-			boolean correct = Zip.verifyZipPassword(rarFile, pw);
+			boolean correct = new Zip().verifyPassword(rarFile, pw);
 
 			if (correct) {
 				System.out.println("成功解開壓縮檔，密碼為 [" + pw + "]");

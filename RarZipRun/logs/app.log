@@ -1,0 +1,22 @@
+2023-09-24 15:06:14.759 [main] INFO  com.BatTest - D:/test.txt
+2023-09-24 15:06:14.768 [main] INFO  com.BatTest - 1234
+!@#$%^&*(
+中文國繁
+2023-09-24 15:06:14.775 [main] INFO  com.BatTest - false
+2023-09-24 15:08:20.362 [main] INFO  com.BatTest - D:/test.txt
+2023-09-24 15:08:20.373 [main] INFO  com.BatTest - 雓??1234
+!@#$%^&*(
+中文國繁
+2023-09-24 15:08:20.380 [main] INFO  com.BatTest - false
+2023-09-24 15:23:42.849 [main] ERROR com.CrackMain - java.io.FileNotFoundException: 3 (系統找不到指定的檔案。)
+2023-09-24 15:25:04.894 [main] ERROR com.CrackMain - java.io.FileNotFoundException: 3 (系統找不到指定的檔案。)
+2023-09-24 16:21:47.113 [main] INFO  com.CrackMain - 3
+2023-09-24 16:21:47.121 [main] ERROR com.CrackMain - java.io.FileNotFoundException: 3 (系統找不到指定的檔案。)
+2023-09-24 16:23:44.103 [main] INFO  com.CrackMain - D:test5.rar
+2023-09-24 16:25:46.717 [main] INFO  com.CrackMain - D:/test5.rar
+2023-09-24 16:26:37.486 [main] INFO  com.CrackMain - D:/test4.rar
+2023-09-24 16:26:37.492 [main] INFO  com.CrackMain - D:/test4.rar
+2023-09-24 16:27:26.198 [main] INFO  com.CrackMain - D:/test5.rar
+2023-09-24 16:28:04.316 [main] INFO  com.CrackMain - D:/test5.rar
+2023-09-24 16:28:28.789 [main] INFO  com.CrackMain - D:/test4.rar
+2023-09-24 16:28:28.795 [main] INFO  com.CrackMain - D:/test4.rar

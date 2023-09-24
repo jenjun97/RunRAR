@@ -6,24 +6,9 @@ import java.io.FileInputStream;
 import net.lingala.zip4j.io.inputstream.ZipInputStream;
 import net.lingala.zip4j.model.LocalFileHeader;
 
-public class Zip {
-
-	public static void main(String[] args) {
-		System.out.print("Enter the ZIP file path: ");
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
-		String filePath = scanner.nextLine();
-
-		System.out.print("Enter the password: ");
-		String password = scanner.nextLine();
-
-		if (verifyZipPassword(filePath, password)) {
-			System.out.println("Correct password!");
-		} else {
-			System.out.println("Incorrect password!");
-		}
-	}
-
-	public static boolean verifyZipPassword(String filePath, String password) {
+public class Zip implements CompressionInterface {
+	@Override
+	public boolean verifyPassword(String filePath, String password) {
 		try (ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream(new File(filePath)),
 				password.toCharArray())) {
 			LocalFileHeader localFileHeader;
