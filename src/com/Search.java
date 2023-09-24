@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Demo {
+public class Search {
 
 //	public static void main(String[] args) {
 //		File file = new File("C:\\Program Files\\WinRAR\\UnRAR.exe");

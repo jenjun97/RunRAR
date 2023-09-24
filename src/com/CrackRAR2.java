@@ -6,18 +6,16 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.junrar.exception.RarException;
-
 public class CrackRAR2 {
 	static boolean keep = true;
 
-	public static void main(String[] args) throws RarException, IOException, InterruptedException {
-		String rarFile = "D:/test.rar";
+	public static void main(String[] args) throws IOException, InterruptedException {
+		String rarFile = "D:/testzs.zip";
 		String UnRar = "C:\\Program Files\\WinRAR\\UnRAR.exe";
 //		String UnRar = "C:\\Users\\jun\\Desktop\\LearnJava\\eclipse-workspace\\RunRAR\\lib\\UnRAR.exe";
 
 //		String[] nums = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
-		String[] nums = "0123456789".split("");
+		String[] nums = "z0123456789".split("");
 		int leng = 3;
 
 		// 預設要放幾位
@@ -36,7 +34,8 @@ public class CrackRAR2 {
 		while (keep) {
 			numList = add(numList, maxList, nums.length);
 			String pw = getPW(numList, nums);
-			boolean correct = isPasswordCorrect(rarFile, pw, UnRar);
+//			boolean correct = isPasswordCorrect(rarFile, pw, UnRar);
+			boolean correct = Zip.verifyZipPassword(rarFile, pw);
 
 			if (correct) {
 				System.out.println("成功解開壓縮檔，密碼為 [" + pw + "]");
@@ -51,7 +50,7 @@ public class CrackRAR2 {
 
 	// 驗證密碼
 	static boolean isPasswordCorrect(String rarFile, String password, String UnRar)
-			throws RarException, IOException, InterruptedException {
+			throws IOException, InterruptedException {
 		String command = UnRar + " t -p" + password + " " + rarFile;
 
 		Process process = new ProcessBuilder(command.split(" ")).start();
